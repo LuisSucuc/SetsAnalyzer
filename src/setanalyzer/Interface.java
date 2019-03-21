@@ -246,15 +246,21 @@ public class Interface extends javax.swing.JFrame {
                     //Si las cadenas no están vacías (Esto se da cuando solo se encuentran errores)
 
                         //Se guarda la cadenaOriginal leida y la cadena de tokens separada por una flecha
-                        String finLinea;
-                        if(!line_operation)
-                            finLinea = " SIN RECONOCIMIENTOS\n";
-
-                        else
-                            finLinea = "\n";
+                        String finLinea = "\n";
+                        if(!line_operation && "".equals(cadenaOriginal) ){
+                            cadenaReporte = cadenaReporte + finLinea;
+                            continue;
+                        }
 
                         line_operation = false;
-                        cadenaReporte = cadenaReporte + cadenaOriginal + " ---> " + cadenaTokens + finLinea;
+                        if(!errors){
+                            cadenaReporte = cadenaReporte + cadenaOriginal + " --->  Línea "+ lexer.line_count + " correcta. \n"; //+ cadenaTokens + finLinea;
+                        }
+                        else{
+                            cadenaReporte = cadenaReporte + cadenaOriginal + " ---> "+  cadenaTokens + finLinea;
+                            errors = false;
+                        }
+                        
                         //Se limpia la cadenaOriginal y cadenaTokens
                         cadenaTokens = cadenaOriginal = "";
 
@@ -269,28 +275,31 @@ public class Interface extends javax.swing.JFrame {
                     //Se suma a la cadena original el texto-palabra que se está evaluando
                     cadenaOriginal = cadenaOriginal + " "+ lexer.yytext();
                     //Se suma a la cadena de tokens el token obtenido (ERROR)
-                    cadenaTokens = cadenaTokens + "No reconocido '" + lexer.yytext() + "' en línea " + lexer.line_count + " columna " + lexer.column_count + ". ";
+                    if(!errors) {
+                        cadenaTokens = cadenaTokens + "No reconocido '" + lexer.yytext() + "' en línea " + lexer.line_count + " columna " + lexer.column_count + ". ";
+                    }
+                    
 
                     //Indica que existen errores para posteriormente mostrar al ventana
                     errors = true;
                     break;
 
-                case SPACES:
+                /*case SPACES:
                     //Si exiten espacios se añade al texto original
                     cadenaOriginal = cadenaOriginal + " ";
                     break;
-
+                */
 
                 //Para todos los lexemas reconocidos
                 default:
                     //Se suma a la cadena original el texto-palabra que se está evaluando
                     cadenaOriginal = cadenaOriginal + lexer.yytext();
                     if (token == CONJUNTO_UNIVERSO || token == DEFINICION || token == CONJUNTO || token == OPERACION_CONJUNTO || token == OPERACION) {
-                        cadenaTokens = cadenaTokens + " "+ token;
+                        //cadenaTokens = cadenaTokens + " Línea "+ lexer.line_count + " correcta";  //token;
                         line_operation = true;
                     }
                     else{
-                        cadenaTokens = cadenaTokens + " "+ token;
+                        //cadenaTokens = cadenaTokens + " Línea "+ lexer.line_count + " correcta";  //token;
                         line_operation = true;
                     }
             }

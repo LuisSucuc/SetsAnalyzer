@@ -1,20 +1,26 @@
-DEFINICION --->  DEFINICION
-UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama" } --->  CONJUNTO_UNIVERSO
-JUAN = { "1", "2", "3", "42AsaASd" } --->  CONJUNTO
-MARIA = { "2", "3", "5", "6" } --->  CONJUNTO
-CARLOS = { "3", "5", "7", "8" } --->  CONJUNTO
-VERDURA = { "0" } --->  CONJUNTO
-PATO = { "a" } --->  CONJUNTO
-VACIO = { } --->  CONJUNTO_VACIO
- --->  SIN RECONOCIMIENTOS
-OPERACION --->  OPERACION
-A & B --->  OPERACION_CONJUNTO
-A&B --->  OPERACION_CONJUNTO
-A&B --->  OPERACION_CONJUNTO
-A$B --->  OPERACION_CONJUNTO
-A $ B --->  OPERACION_CONJUNTO
-A / B --->  OPERACION_CONJUNTO
-A & E --->  OPERACION_CONJUNTO
-A * E --->  OPERACION_CONJUNTO
- A^c ---> No reconocido 'A' en línea 18 columna 0.  COMPLEMENTO
+DEFINICION --->  Línea 0 correcta. 
+UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama" } --->  Línea 1 correcta. 
+JUAN = { "1", "2", "3", "42AsaASd" } --->  Línea 2 correcta. 
+MARIA = { "2", "3", "5", "6" } --->  Línea 3 correcta. 
+CARLOS = { "3", "5", "7", "8" } --->  Línea 4 correcta. 
+VERDURA = { "0" } --->  Línea 5 correcta. 
+PATO = { "a" } --->  Línea 6 correcta. 
+VACIO = { } --->  Línea 7 correcta. 
+
+OPERACION --->  Línea 9 correcta. 
+JUAN & MARIA --->  Línea 10 correcta. 
+JUAN&MARIA --->  Línea 11 correcta. 
+ (JUAN&MARIA ) ---> No reconocido '(' en línea 12 columna 0. 
+JUAN$MARIA --->  Línea 13 correcta. 
+JUAN $ MARIA --->  Línea 14 correcta. 
+JUAN / MARIA --->  Línea 15 correcta. 
+JUAN & PATO --->  Línea 16 correcta. 
+MARIA * VERDURA --->  Línea 17 correcta. 
+PATO^c --->  Línea 18 correcta. 
+JUAN & MARIA  ¿   P A T O ---> No reconocido '¿' en línea 19 columna 13. 
+A^c --->  Línea 20 correcta. 
+A^c --->  Línea 21 correcta. 
+A^c --->  Línea 22 correcta. 
+A^c --->  Línea 23 correcta. 
+A^c --->  Línea 24 correcta. 
 

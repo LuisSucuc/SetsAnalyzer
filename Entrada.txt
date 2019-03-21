@@ -8,12 +8,18 @@ PATO = { "a" }
 VACIO = { }
 
 OPERACION
-A & B
-A&B
-A&B
-A$B
-A $ B
-A / B
-A & E
-A * E
+JUAN & MARIA
+JUAN&MARIA
+(JUAN&MARIA)
+JUAN$MARIA
+JUAN $ MARIA
+JUAN / MARIA
+JUAN & PATO
+MARIA * VERDURA
+PATO^c
+JUAN & MARIA ¿ PATO
+A^c
+A^c
+A^c
+A^c
 A^c
