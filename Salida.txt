@@ -1,26 +1,30 @@
-DEFINICION --->  Línea 0 correcta. 
-UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama" } --->  Línea 1 correcta. 
-JUAN = { "1", "2", "3", "42AsaASd" } --->  Línea 2 correcta. 
-MARIA = { "2", "3", "5", "6" } --->  Línea 3 correcta. 
-CARLOS = { "3", "5", "7", "8" } --->  Línea 4 correcta. 
-VERDURA = { "0" } --->  Línea 5 correcta. 
-PATO = { "a" } --->  Línea 6 correcta. 
-VACIO = { } --->  Línea 7 correcta. 
+DEFINICION       --->  Línea 0 correcta. 
+UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama" }       --->  Línea 1 correcta. 
+JUAN = { "1", "2", "3", "42AsaASd" }       --->  Línea 2 correcta. 
+MARIA = { "2", "3", "5", "6" }       --->  Línea 3 correcta. 
+CARLOS = { "3", "5", "7", "8" }       --->  Línea 4 correcta. 
+VERDURA = { "0" }       --->  Línea 5 correcta. 
+PATO = {  a }       ---> No reconocido 'a' en línea 6 columna 9. 
+VACIO = { }       --->  Línea 7 correcta. 
 
-OPERACION --->  Línea 9 correcta. 
-JUAN & MARIA --->  Línea 10 correcta. 
-JUAN&MARIA --->  Línea 11 correcta. 
- (JUAN&MARIA ) ---> No reconocido '(' en línea 12 columna 0. 
-JUAN$MARIA --->  Línea 13 correcta. 
-JUAN $ MARIA --->  Línea 14 correcta. 
-JUAN / MARIA --->  Línea 15 correcta. 
-JUAN & PATO --->  Línea 16 correcta. 
-MARIA * VERDURA --->  Línea 17 correcta. 
-PATO^c --->  Línea 18 correcta. 
-JUAN & MARIA  ¿   P A T O ---> No reconocido '¿' en línea 19 columna 13. 
-A^c --->  Línea 20 correcta. 
-A^c --->  Línea 21 correcta. 
-A^c --->  Línea 22 correcta. 
-A^c --->  Línea 23 correcta. 
-A^c --->  Línea 24 correcta. 
+OPERACION       --->  Línea 9 correcta. 
+JUAN & MARIA       --->  Línea 10 correcta. 
+JUAN&MARIA$PATO&JUANITO       --->  Línea 11 correcta. 
+(JUAN&MARIA)       --->  Línea 12 correcta. 
+JUAN$MARIA       --->  Línea 13 correcta. 
+JUAN $ MARIA       --->  Línea 14 correcta. 
+JUAN / MARIA       --->  Línea 15 correcta. 
+JUAN & PATO       --->  Línea 16 correcta. 
+MARIA * VERDURA       --->  Línea 17 correcta. 
+PATO^c       --->  Línea 18 correcta. 
+JUAN & MARIA  ¿ PATO       ---> No reconocido '¿' en línea 19 columna 13. 
+A^c       --->  Línea 20 correcta. 
+A^c       --->  Línea 21 correcta. 
+A^c       --->  Línea 22 correcta. 
+A^c       --->  Línea 23 correcta. 
+A^c       --->  Línea 24 correcta. 
+
+
+( JUAN & MARIA ) $ JUAN & MARIA $ ( JUAN & MARIA )       --->  Línea 27 correcta. 
+( JUAN & MARIA ) / PABLO / (( JUAN & MARIA )       --->  Línea 28 correcta. 
 

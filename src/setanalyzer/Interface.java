@@ -254,10 +254,10 @@ public class Interface extends javax.swing.JFrame {
 
                         line_operation = false;
                         if(!errors){
-                            cadenaReporte = cadenaReporte + cadenaOriginal + " --->  Línea "+ lexer.line_count + " correcta. \n"; //+ cadenaTokens + finLinea;
+                            cadenaReporte = cadenaReporte + cadenaOriginal + "       --->  Línea "+ lexer.line_count + " correcta. \n"; //+ cadenaTokens + finLinea;
                         }
                         else{
-                            cadenaReporte = cadenaReporte + cadenaOriginal + " ---> "+  cadenaTokens + finLinea;
+                            cadenaReporte = cadenaReporte + cadenaOriginal + "       ---> "+  cadenaTokens + finLinea;
                             errors = false;
                         }
                         
